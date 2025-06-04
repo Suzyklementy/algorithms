@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Algorytmy</title>
+</head>
+<body>
+    <a id="top"></a>
+
+    <header class="header">
+        <h1>Algorytmy</h1>
+    </header>
+
+    <main class="container">
+        <div class="light banner">
+            <div class="description">
+                <h2 class="description-header">Strona powstała jako projekt na lekcje informatyki. Implementuje ona działanie 9 algorytmów w postaci aplikacji webowej.</h2>
+
+                <!-- <p class="description-content">Strona powstała jako projekt na lekcje informatyki. Implementuje ona działanie 9 algorytmów</p> -->
+            </div>
+        </div>
+        
+        <div class="dark">
+            <div class="algorithms">
+                <h2 class="algorithms-header">Lista Algorytmów</h2>
+
+                <ul class="algorithms-list">
+                    <li><a href="#euclidean">Euklidesa</a></li>
+                    <li><a href="#polish_flag">Flagi Polskiej</a></li>
+                    <li><a href="#french_flag">Flagi Francuskiej</a></li>
+                    <li><a href="#bubble_sort">Sortowanie Bąbelkowe</a></li>
+                    <li><a href="#selection_sort">Sortowanie Przez Wybór</a></li>
+                    <li><a href="#binary_search">Wyszukiwanie Binarne</a></li>
+                    <li><a href="#making_change">Wydawanie Reszty</a></li>
+                    <li><a href="#caesars_code">Szyfr Cezara</a></li>
+                    <li><a href="#luhna">Luhna</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="light">
+            <div class="information">
+                <h2 class="information-header">Inforamcje</h2>
+
+                <div class="information-content">
+                    <div class="information-description">
+                        <p>Aby Przetestować strone należy wybrać algorytm powyżej, po przekierowaniu na podstronie mozna przetestowac algorytm poprzez wpisanie odpowiednych danych.</p>
+                        <p>Strona Wykonan w HTML, CSS i Javascript.</p>
+                        <p>Autor: <a href="#">Kamil Janik</a></p>
+                        <p>Dokumentacja: <a href="#">Kliknij tutaj</a></p>
+                    </div>
+
+                    <div class="information-image">
+                        <img src="./assets/information.webp" alt="Obraz ozdobny">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a id="euclidean"></a>
+        <div class="dark">
+            <div class="algorithm">
+                <div class="algorithm-definition">
+                    <h2 class="algorithm-definition-header">Algorytm Euklidesa</h2>
+
+                    <p>Algorytm Euklidesa służy do znajdowania największego wspólnego dzielnika (NWD) dwóch liczb naturalnych (A i B).</p>
+                    <p>Polega on na wielokrotnym wykonywaniu dzielenia z resztą aż do momentu, gdy reszta z dzielenia będzie równa zero. Wtedy największym wspólnym dzielnikiem jest ostatnia niezerowa reszta.</p>
+                </div>
+                <div class="algorithm-work">
+                    <form class="algorithm-form">
+                        <label for="euclidean_a" class="algorithm-label">Podaj A:</label>
+                        <input type="number" class="algorithm-input" id="euclidean_a">
+                        <label for="euclidean_b" class="algorithm-label">Podaj B:</label>
+                        <input type="number" class="algorithm-input" id="euclidean_b">
+                        <input type="submit" value="Test" class="algorithm-button" id="euclidean_submit">
+                    </form>
+
+                    <div class="algorithm-result">
+                        <label class="algorithm-label">Rezultat: </label>
+                        <p id="euclidean_result"></p>
+                    </div>
+
+                    <a href="#top" class="algorithm-anchor">Do góry</a>
+                </div>
+            </div>
+        </div>
+
+        <a id="polish_flag"></a>
+        <div class="light">
+            <div class="algorithm">
+                <div class="algorithm-definition">
+                    <h2 class="algorithm-definition-header">Algorytm Flagi Polskiej</h2>
+
+                    <p>Algorytm flagi polskiej służy do posortowania tablicy zawierającej dwie wartości (0 i 1) w taki sposób, aby zero było na początku.</p>
+                    <p>Algorytm flagi polskiej działa w taki sposób, że przegląda elementy tablicy od początku do końca, rozdzielając je na dwie grupy: 0 i 1. Na początku ustawiamy dwa wskaźniki: low (na pozycję 0) i mid (również na pozycję 0). Przeglądamy tablicę od lewej do prawej:</p>
+
+                    <ul>
+                        <li>Jeśli natrafimy na 0, to zamieniamy je z elementem na pozycji low, zwiększamy oba wskaźniki (low i mid) o 1 i przechodzimy dalej.</li>
+                        <li>Jeśli natrafimy na 1, to nie wykonujemy zamiany, tylko zwiększamy wskaźnik mid o 1 i idziemy dalej.</li>
+                    </ul>
+                </div>
+                <div class="algorithm-work">
+                    <form class="algorithm-form">
+                        <label for="polish_flag_array" class="algorithm-label">Podaj tablice 0 i 1 (odzielone przecinkami):</label>
+                        <input type="text" class="algorithm-input" id="polish_flag_array">
+                        <input type="submit" value="Test" class="algorithm-button" id="polish_flag_submit">
+                    </form>
+
+                    <div class="algorithm-result">
+                        <label class="algorithm-label">Rezultat: </label>
+                        <p id="polish_flag_result"></p>
+                    </div>
+
+                    <a href="#top" class="algorithm-anchor">Do góry</a>
+                </div>
+            </div>
+        </div>
+
+        <a id="french_flag"></a>
+        <div class="dark">
+            <div class="algorithm">
+                <div class="algorithm-definition">
+                    <h2 class="algorithm-definition-header">Algorytm Flagi Francuskiej</h2>
+
+                    <p>Algorytm flagi francuskiej tak jak w przypdaku flagi polskiej służy do posortowania tablicy ale zawierającej trzy wartości (0, 1 i 2) w taki sposób, aby zero było na początku potem 1 a na koncu 2.</p>
+                    <p>Algorytm używa trzech wskaźników oraz jest przeglądana od lewej do prawej, aż mid przejdzie całą tablicę.</p>
+
+                    <ul>
+                        <li>low - wskazuje miejsce, gdzie powinny być umieszczone 0.</li>
+                        <li>mid - bieżący element, który sprawdzamy.</li>
+                        <li>high - wskazuje miejsce, gdzie powinny być umieszczone 2.</li>
+                    </ul>
+                </div>
+                <div class="algorithm-work">
+                    <form class="algorithm-form">
+                        <label for="french_flag_array" class="algorithm-label">Podaj tablice 0, 1 i 2 (odzielone przecinkami):</label>
+                        <input type="text" class="algorithm-input" id="french_flag_array">
+                        <input type="submit" value="Test" class="algorithm-button" id="french_flag_submit">
+                    </form>
+
+                    <div class="algorithm-result">
+                        <label class="algorithm-label">Rezultat: </label>
+                        <p id="french_flag_result"></p>
+                    </div>
+
+                    <a href="#top" class="algorithm-anchor">Do góry</a>
+                </div>
+            </div>
+        </div>
+
+        <a id="bubble_sort"></a>
+        <div class="light">
+            <div class="algorithm">
+                <div class="algorithm-definition">
+                    <h2 class="algorithm-definition-header">Algorytm Sortowanie Bąbelkowe</h2>
+
+                    <p>Sortowanie bąbelkowe to prosty algorytm sortowania, który działa poprzez wielokrotne przechodzenie przez listę i porównywanie sąsiednich elementów i zamienianie ich miejscami.</p>
+                    <p>Algorytm ten nie jest zbyt wydajny [złożoność czasowa O(n²)] lecz przy małych zbiorach danych nie jest to problemem.</p>
+                </div>
+                <div class="algorithm-work">
+                    <form class="algorithm-form">
+                        <label for="bubble_sort_array" class="algorithm-label">Podaj tablice liczb (odzielone przecinkami):</label>
+                        <input type="text" class="algorithm-input" id="bubble_sort_array">
+                        <input type="submit" value="Test" class="algorithm-button" id="bubble_sort_submit">
+                    </form>
+
+                    <div class="algorithm-result">
+                        <label class="algorithm-label">Rezultat: </label>
+                        <p id="bubble_sort_result"></p>
+                    </div>
+
+                    <a href="#top" class="algorithm-anchor">Do góry</a>
+                </div>
+            </div>
+        </div>
+
+        <a id="selection_sort"></a>
+        <div class="dark">
+            <div class="algorithm">
+                <div class="algorithm-definition">
+                    <h2 class="algorithm-definition-header">Algorytm Sortowanie Przez Wybieranie</h2>
+
+                    <p>Sortowanie przez wybieranie to algorytm sortowania, który polega na wielokrotnym znajdowaniu najmniejszeg elementu z nieposortowanej części tablicy i przenoszeniu go na właściwe miejsce.</p>
+
+                    <img src="./assets/algorithms/selection-sort.png" alt="schemat działania">                    
+                </div>
+                <div class="algorithm-work">
+                    <form class="algorithm-form">
+                        <label for="selection_sort_array" class="algorithm-label">Podaj tablice liczb (odzielone przecinkami):</label>
+                        <input type="text" class="algorithm-input" id="selection_sort_array">
+                        <input type="submit" value="Test" class="algorithm-button" id="selection_sort_submit">
+                    </form>
+
+                    <div class="algorithm-result">
+                        <label class="algorithm-label">Rezultat: </label>
+                        <p id="selection_sort_result"></p>
+                    </div>
+
+                    <a href="#top" class="algorithm-anchor">Do góry</a>
+                </div>
+            </div>
+        </div>
+
+        <a id="binary_search"></a>
+        <div class="light">
+            <div class="algorithm">
+                <div class="algorithm-definition">
+                    <h2 class="algorithm-definition-header">Algorytm Wyszukiwanie Binarne</h2>
+
+                    <p>Algorytm Wyszukiwanie binarne to szybki algorytm służący do znajdowania elementu w posortowanej tablicy.</p>
+                    <p>Działa na zasadzie dzielenia zbioru na pół i szukania elementu w caraz mniejszym zbiorze.</p>
+                    <p>Algorytm dzieli tablice na pół i porównuje srodkową wartość do szukanej</p>
+
+                    <ul>
+                        <li>Jeśli jest równy - zwróć pozycję (element znaleziony).</li>
+                        <li>Jeśli mniejszy - przeszukuj prawą połowę.</li>
+                        <li>Jeśli większy - przeszukuj lewą połowę.</li>
+                    </ul>
+                </div>
+                <div class="algorithm-work">
+                    <form class="algorithm-form">
+                        <label for="binary_search_array" class="algorithm-label">Podaj posortowaną tablice liczb (odzielone przecinkami):</label>
+                        <input type="text" class="algorithm-input" id="binary_search_array">
+                        <label for="binary_search_target" class="algorithm-label">Podaj szukaną liczbe:</label>
+                        <input type="number" class="algorithm-input" id="binary_search_target">
+                        <input type="submit" value="Test" class="algorithm-button" id="binary_search_submit">
+                    </form>
+
+                    <div class="algorithm-result">
+                        <label class="algorithm-label">Rezultat: </label>
+                        <p id="binary_search_result"></p>
+                    </div>
+
+                    <a href="#top" class="algorithm-anchor">Do góry</a>
+                </div>
+            </div>
+        </div>
+
+        <a id="making_change"></a>
+        <div class="dark">
+            <div class="algorithm">
+                <div class="algorithm-definition">
+                    <h2 class="algorithm-definition-header">Algorytm Wydawania Reszty</h2>
+
+                    <p>Algorytm ten polega na tym by znalesc jak najlepszy sposób na wydanie reszty z dostępnych nominałów</p>
+                    <p>Algorytm działa w prosty sposób: bierze najwiekszy możliwy nominał ktory nie przekracza kwoty reszty i odejmuje go od tej kwoty i powtarza cykl az do końca.</p>
+
+                    <img src="./assets/algorithms/making_change.png" alt="Banknoty">
+                </div>
+                <div class="algorithm-work">
+                    <form class="algorithm-form">
+                        <label for="making_change_array" class="algorithm-label">Podaj tablice nominałów (odzielone przecinkami):</label>
+                        <input type="text" class="algorithm-input" id="making_change_array">
+                        <label for="making_change_amount" class="algorithm-label">Podaj reszte do wydania:</label>
+                        <input type="number" class="algorithm-input" id="making_change_amount">
+                        <input type="submit" value="Test" class="algorithm-button" id="making_change_submit">
+                    </form>
+
+                    <div class="algorithm-result">
+                        <label class="algorithm-label">Rezultat: </label>
+                        <p id="making_change_result"></p>
+                    </div>
+
+                    <a href="#top" class="algorithm-anchor">Do góry</a>
+                </div>
+            </div>
+        </div>
+
+        <a id="caesars_code"></a>
+        <div class="light">
+            <div class="algorithm">
+                <div class="algorithm-definition">
+                    <h2 class="algorithm-definition-header">Algorytm Szyfru Cezara</h2>
+
+                    <p>Szyfr Cezara to jeden z prostszych i jeden z pierwszych szyfrów jakie zostały wymyślone.</p>
+                    <p>Polega on na przesuwaniu liter w alfabecie o daną wartość (klucz), a odszyfrowanie polega na tym samym lecz w drugą strone.</p>
+                    <p>Szyft ten jest bardzo prosty i służy tylko jako ciekawostka edukacyjno-historyczna ponieważ odszyfrować go może każdy człowiek przesuwając litery w alfabecie aż uzyska sensowne wyrazy lub zdania.</p>
+                </div>
+                <div class="algorithm-work">
+                    <form class="algorithm-form">
+                        <label for="caesars_code_text" class="algorithm-label">Podaj tekst:</label>
+                        <input type="text" class="algorithm-input" id="caesars_code_text">
+                        <label for="caesars_code_key" class="algorithm-label">Podaj klucz:</label>
+                        <input type="number" class="algorithm-input" id="caesars_code_key">
+
+                        <label for="caesars_code_mode" class="algorithm-label">Wybierz opcje:</label>
+                        <select id="caesars_code_mode" class="algorithm-select">
+                            <option value="encrypt">Zaszyfruj</option>
+                            <option value="decrypt">Odszyfruj</option>
+                        </select>
+
+                        <input type="submit" value="Test" class="algorithm-button" id="caesars_code_submit">
+                    </form>
+
+                    <div class="algorithm-result">
+                        <label class="algorithm-label">Rezultat: </label>
+                        <p id="caesars_code_result"></p>
+                    </div>
+
+                    <a href="#top" class="algorithm-anchor">Do góry</a>
+                </div>
+            </div>
+        </div>
+
+        <a id="luhna"></a>
+        <div class="dark">
+            <div class="algorithm">
+                <div class="algorithm-definition">
+                    <h2 class="algorithm-definition-header">Algorytm Luhna</h2>
+
+                    <p>Algorytm Luhna (znany też jako moduł 10 lub mod-10) opracowany przez Hansa Petera Luhna w 1954 r. to algorytm sprawdzający poprawność numerów identyfikacyjnych, takich jak:</p>
+
+                    <ul>
+                        <li>numery kart kredytowych i debetowych</li>
+                        <li>numery PESEL</li>
+                        <li>numery seryjne</li>
+                    </ul>
+
+                    <p>Działanie:</p>
+                    <p>Odwrócenie numeru oraz podwajanie co drugiej liczby, jesli podwojona liczba jest wieksza od 9 to dodaj jej cyfry do siebie, potem każdą liczbe dodaj do siebie. Liczbą kontrolną jest liczba która dodana powstałej liczby dzieli sie przez 10.</p>
+                    <img src="./assets/algorithms/luhna.png" alt="Schemat">
+                </div>
+                <div class="algorithm-work">
+                    <form class="algorithm-form">
+                        <label for="luhna_input" class="algorithm-label">Podaj numer:</label>
+                        <input type="number" class="algorithm-input" id="luhna_input">
+
+                        <label for="luhna_mode" class="algorithm-label">Wybierz opcje:</label>
+                        <select id="luhna_mode" class="algorithm-select">
+                            <option value="calculate">Oblicz cyfre konrolna</option>
+                            <option value="validate">Sprawdz cyfre kontrolna</option>
+                        </select>
+
+                        <input type="submit" value="Test" class="algorithm-button" id="luhna_submit">
+                    </form>
+
+                    <div class="algorithm-result">
+                        <label class="algorithm-label">Rezultat: </label>
+                        <p id="luhna_result"></p>
+                    </div>
+
+                    <a href="#top" class="algorithm-anchor">Do góry</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-logo">Algorytmy&reg;</p>
+        </footer>        
+    </main>
+    
+    <script src="./scripts/euclidean.js"></script>
+    <script src="./scripts/polishFlag.js"></script>
+    <script src="./scripts/frenchFlag.js"></script>
+    <script src="./scripts/bubbleSort.js"></script>
+    <script src="./scripts/selectionSort.js"></script>
+    <script src="./scripts/binarySearch.js"></script>
+    <script src="./scripts/makingChange.js"></script>
+    <script src="./scripts/caesarsCode.js"></script>
+    <script src="./scripts/luhna.js"></script>
+</body>
+</html>

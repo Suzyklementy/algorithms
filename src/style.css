@@ -1,0 +1,542 @@
+
+:root
+{
+    --dark-font-color: #eee;
+    --light-font-color: #141414;
+    --dark-background-color: #151515;
+    --light-background-color: #e9e9e9;
+    --secondary-color: #eba242;
+    --hover-secondary-color: #fdc464;
+    --neutral-grey-color: #606060;
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+.header
+{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-background-color);
+    color: var(--dark-font-color);
+}
+
+.header h1
+{
+    font-size: 38px;
+    letter-spacing: 5px;
+}
+
+.footer
+{
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 50px;
+    background-color: var(--dark-background-color);
+    color: var(--dark-font-color);
+}
+
+.footer-logo
+{
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.container
+{
+    height: 1000px;
+    width: 100%;
+}
+
+.light, .dark
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.light
+{
+    color: var(--light-font-color);
+    background-color: var(--light-background-color);
+}
+
+.dark
+{
+    color: var(--dark-font-color);
+    background-color: var(--dark-background-color);
+}
+
+.banner
+{
+    background: rgba(0, 0, 0, 0.75) url(./assets/banner.webp);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+}
+
+.description
+{
+    width: 70%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding: 50px 250px;
+    color: var(--dark-font-color);
+}
+
+.description-header
+{
+    font-size: 28px;
+    text-align: center;
+}
+
+/* .description-content
+{
+    padding-left: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+} */
+
+.algorithms
+{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+    padding: 50px;
+}
+
+.algorithms-header
+{
+    font-size: 28px;
+}
+
+.algorithms-list
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.algorithms-list li
+{
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.information
+{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+    padding: 50px;
+}
+
+.information-header
+{
+    font-size: 28px;
+}
+
+.information-content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.information-description
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.information-description p
+{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.information-image
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-image img
+{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.algorithm
+{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 35px;
+    padding: 50px;
+}
+
+.algorithm-definition
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.algorithm-definition-header
+{
+    font-size: 28px;
+}
+
+.algorithm-definition p, .algorithm-definition ul li
+{
+    font-size: 18px;
+    padding: 10px;
+}
+
+.algorithm-definition img
+{
+    width: calc(100% - 100px);
+    margin: 25px;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.algorithm-work
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.algorithm-form
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.algorithm-label
+{
+    font-size: 20px;
+}
+
+.algorithm-input
+{
+    width: 100%;
+    height: 35px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+    color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.algorithm-input:focus
+{
+    outline: 0;
+}
+
+.algorithm-select
+{
+    padding: 10px;
+    font-size: 16px;
+    color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid var(--secondary-color);
+    border-radius: 15px;
+}
+
+.algorithm-select:focus
+{
+    outline: 0;
+}
+
+.algorithm-button
+{
+    width: 200px;
+    height: 35px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+    color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    padding: 5px;
+    align-self: flex-end;
+}
+
+.algorithm-button:hover
+{
+    color: var(--hover-secondary-color);
+    border-color: var(--hover-secondary-color);
+    text-shadow:
+        0 0 5px rgba(253, 196, 100, 0.5),
+        0 0 10px rgba(253, 196, 100, 0.3);
+}
+
+.algorithm-result
+{
+    width: 100%;
+    padding: 50px;
+}
+
+.algorithm-result p
+{
+    width: 100%;
+    height: 100px;
+    color: var(--secondary-color);
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.algorithm-anchor
+{
+    align-self: flex-end;
+    font-size: 20px;
+    padding: 7.5px 15px;
+    color: var(--dark-font-color);
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+}
+
+.algorithm-anchor:hover
+{
+    color: var(--dark-font-color);
+    background-color: var(--hover-secondary-color);
+    box-shadow:
+        0 0 5px rgba(253, 196, 100, 0.5),
+        0 0 10px rgba(253, 196, 100, 0.3);
+}
+
+a
+{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: var(--hover-secondary-color);
+    text-shadow:
+        0 0 5px rgba(253, 196, 100, 0.5),
+        0 0 10px rgba(253, 196, 100, 0.3);
+}
+
+ul
+{
+    list-style: inside;
+}
+
+@media (max-width: 1440px)
+{
+    .description, .algorithms, .information, .algorithm
+    {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1024px)
+{
+    .algorithms-list li
+    {
+        width: calc(33.3% - 40px);
+        font-size: 18px;
+    }
+
+    .information-content
+    {
+        flex-direction: column;
+    }
+
+    .information-description, .information-image
+    {
+        width: 100%;
+    }
+
+    .algorithm
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .algorithm-definition, .algorithm-work
+    {
+        width: 100%;
+    }
+
+    .algorithm-result, .algorithm-form
+    {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .description, .algorithms, .information, .algorithm
+    {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .description, .algorithms, .information
+    {
+        align-items: center;
+    }
+
+    .information-content
+    {
+        padding: 5px;
+    }
+
+    .algorithm
+    {
+        gap: 15px;
+    }
+
+    .algorithm-definition
+    {
+        align-items: center;
+    }
+
+    .algorithms-list li
+    {
+        font-size: 16px;
+    }
+
+    .algorithm-work
+    {
+        padding-top: 30px;
+        border-top: 3px dashed var(--neutral-grey-color);
+    }
+
+    .algorithm-label
+    {
+        font-size: 16px;
+    }
+
+    .algorithm-button
+    {
+        width: 150px;
+        height: 30px;
+        padding: 0;
+    }
+
+    .algorithm-anchor
+    {
+        font-size: 18px;
+    }
+
+    .algorithm-definition img
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px)
+{
+    .description, .algorithms, .information, .algorithm
+    {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .description-content
+    {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .information
+    {
+        gap: 10px;
+    }
+
+    .information-description
+    {
+        padding: 10px;
+    }
+
+    .algorithm-definition-header
+    {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .algorithms-list
+    {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .algorithms-list li
+    {
+        width: 100%;
+        font-size: 18px;
+        text-align: start;
+        padding-left: 35px;
+    }
+
+    .algorithm-definition p, .algorithm-definition ul li
+    {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+}

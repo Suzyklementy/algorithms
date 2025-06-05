@@ -1,4 +1,4 @@
-# Dokumentacja Teachniczna
+# Dokumentacja Techniczna
 
 Strona powstała jako projekt na lekcje informatyki. Implementuje ona działanie 9 algorytmów w postaci aplikacji webowej. Każdy algorytm został zaimplementowany w osobnym pliku który posiada funkcje z działaniem algorytmu oraz przypisaną funkcje do *.addEventListener* która łączy działanie algorytmu z UI. 
 

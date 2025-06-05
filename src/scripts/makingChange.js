@@ -8,7 +8,7 @@ makingChangeSubmitBtn.addEventListener('click', (e) => {
     const amountInput = document.getElementById('making_change_amount').value.replaceAll(' ', '');
     const denominationsInput = document.getElementById('making_change_array').value.trim();
 
-    if (amountInput === "" || denominationsInput === "") 
+    if (amountInput == "" || denominationsInput == "") 
     {
         makingChangeResultDisplay.innerHTML = "Podaj kwotę i nominały!";
         return;

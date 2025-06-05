@@ -8,7 +8,7 @@ binarySearchSubmitBtn.addEventListener('click', (e) => {
     const arrayInput = document.getElementById('binary_search_array').value.replaceAll(' ', '');
     const targetInput = document.getElementById('binary_search_target').value.trim();
 
-    if (arrayInput === "" || targetInput === "") 
+    if (arrayInput == "" || targetInput == "") 
     {
         binarySearchResultDisplay.innerHTML = "Podaj tablicę i szukaną liczbę!";
         return;
@@ -24,7 +24,7 @@ binarySearchSubmitBtn.addEventListener('click', (e) => {
 
     const index = binarySearch(array, target);
 
-    if (index !== false) 
+    if (index != false) 
     {
         binarySearchResultDisplay.innerHTML = `Znaleziono ${target} na pozycji ${index}.`;
     } 

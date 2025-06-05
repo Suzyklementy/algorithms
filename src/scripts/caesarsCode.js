@@ -9,7 +9,7 @@ caesarsCodeSubmitBtn.addEventListener('click', (e) => {
     const keyInput = document.getElementById('caesars_code_key').value;
     const mode = document.getElementById('caesars_code_mode').value;
 
-    if (text === "" || keyInput === "") 
+    if (text == "" || keyInput == "") 
     {
         caesarsCodeResultDisplay.innerHTML = "Podaj tekst i klucz!";
         return;
@@ -45,7 +45,7 @@ function encrypt(text, key)
         const letter = text[i];
         const index = letters.indexOf(letter);
 
-        if (index !== -1) 
+        if (index != -1) 
         {
             let newIndex = (index + key);
             if (newIndex > letters.length)
@@ -73,7 +73,7 @@ function decrypt(text, key)
         const letter = text[i];
         const index = letters.indexOf(letter);
 
-        if (index !== -1) 
+        if (index != -1) 
         {
             let newIndex = (index - key);
             if (newIndex < 0) 

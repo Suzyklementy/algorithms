@@ -8,7 +8,7 @@ luhnaSubmitBtn.addEventListener("click", (e) => {
     const input = document.getElementById("luhna_input").value.trim();
     const mode = document.getElementById('luhna_mode').value;
 
-    if (input === "") 
+    if (input == "") 
     {
         luhnaResultDisplay.innerHTML = "Podaj numer!";
         return;
@@ -44,7 +44,8 @@ function calculateControlNumber(number)
         if (i % 2 == 0) 
         {
             total += digit;
-        } else 
+        } 
+        else 
         {
             let multiply = digit * 2;
             if (multiply > 9) multiply -= 9;

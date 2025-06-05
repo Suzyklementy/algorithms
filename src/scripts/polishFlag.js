@@ -8,7 +8,7 @@ polishFlagSubmitBtn.addEventListener('click', (e) => {
     let input = document.getElementById('polish_flag_array').value;
     input = input.replaceAll(' ', '');
 
-    if (input.trim() === "") 
+    if (input.trim() == "") 
     {
         polishFlagResultDisplay.innerHTML = `Podaj dane wejściowe!`;
         return;
@@ -16,7 +16,7 @@ polishFlagSubmitBtn.addEventListener('click', (e) => {
 
     let array = input.split(',').map(x => parseInt(x.trim()));
 
-    if (!array.every(x => x === 0 || x === 1)) 
+    if (!array.every(x => x == 0 || x == 1)) 
     {
         polishFlagResultDisplay.innerHTML = `Podaj tylko zera i jedynki oddzielone przecinkami!`;
         return;
@@ -33,11 +33,11 @@ function sortByPolishFlag(array)
 
     while (left < right) 
     {
-        if (array[left] === 0) 
+        if (array[left] == 0) 
         {
             left++;
         } 
-        else if (array[right] === 1) 
+        else if (array[right] == 1) 
         {
             right--;
         } 

@@ -10,7 +10,7 @@ bubbleSortSubmitBtn.addEventListener('click', (e) => {
 
     console.log(input);
 
-    if (input.trim() === "") 
+    if (input.trim() == "") 
     {
         bubbleSortResultDisplay.innerHTML = `Podaj liczby oddzielone przecinkami!`;
         return;

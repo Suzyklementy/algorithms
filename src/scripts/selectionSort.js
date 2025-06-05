@@ -8,7 +8,7 @@ selectionSortSubmitBtn.addEventListener('click', (e) => {
     let input = document.getElementById('selection_sort_array').value;
     input = input.replaceAll(' ', '');
 
-    if (input === "") 
+    if (input == "") 
     {
         selectionSortResultDisplay.innerHTML = "Podaj liczby oddzielone przecinkami!";
         return;

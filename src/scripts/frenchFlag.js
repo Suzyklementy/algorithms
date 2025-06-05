@@ -8,7 +8,7 @@ frenchFlagSubmitBtn.addEventListener('click', (e) => {
     let input = document.getElementById('french_flag_array').value;
     input = input.replaceAll(' ', '');
 
-    if (input.trim() === "")
+    if (input.trim() == "")
     {
         frenchFlagResultDisplay.innerHTML = `Podaj dane wejściowe!`;
         return;
@@ -16,7 +16,7 @@ frenchFlagSubmitBtn.addEventListener('click', (e) => {
 
     let array = input.split(',').map(x => parseInt(x.trim()));
 
-    if (!array.every(x => x === 0 || x === 1 || x === 2))
+    if (!array.every(x => x == 0 || x == 1 || x == 2))
     {
         frenchFlagResultDisplay.innerHTML = `Podaj tylko liczby 0, 1 lub 2 oddzielone przecinkami!`;
         return;
@@ -34,13 +34,13 @@ function sortByFrenchFlag(array)
 
     while (mid <= high) 
     {
-        if (array[mid] === 0) 
+        if (array[mid] == 0) 
         {
             [array[low], array[mid]] = [array[mid], array[low]];
             low++;
             mid++;
         } 
-        else if (array[mid] === 1) 
+        else if (array[mid] == 1) 
         {
             mid++;
         } else 
